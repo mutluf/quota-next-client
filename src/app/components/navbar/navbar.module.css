@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 100px;
+    align-items: center;
+}
+
+.features{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.logo{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 0 20px;
+}

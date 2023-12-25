@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,7 +14,46 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+.container{
+  background-color: burlywood;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+/* .child{
+ margin-top: 7%;
+ height: 80vh;
+ position: relative;
+} */
+.navbar, .footer {
+  position:absolute;
+  width: 100%;
+  z-index: 2; /* Diğer öğelerden üstte olması için z-index kullanılır */
+}
+
+.navbar {
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* Navbar arka plan rengi ve saydamlık ayarı */
+}
+
+.footer {
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* Footer arka plan rengi ve saydamlık ayarı */
+  text-align: center;
+}
+
+.content {
+  z-index: 1; /* Navbar ve footer'dan arkada olması için z-index kullanılır */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* Sayfa içeriği ile ilgili diğer stillendirmeler */
+}
+
 
 body {
   color: rgb(var(--foreground-rgb));
