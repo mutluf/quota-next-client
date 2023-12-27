@@ -1,7 +1,52 @@
-.contaier{
-    height: 45%;
-    width: 40%;
+.container{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
 }
+.wrapper {
+    position: relative;
+    margin: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.img{
+    width: 600px;
+    /* position: relative;
+   display: inline-block; */
+}
+.content {
+    position:absolute;
+    top: 10%;
+    left: 12%;
+    right: 5%;
+    /* transform: translate(-50%, -50%); burası overflow a neden oluyor */
+    color: #6b3232; /* İstediğiniz metin rengi */
+    font-size: 18px; /* İstediğiniz metin boyutu */
+    /* text-align: center; */
+    /* background-color: rgba(0, 0, 0, 0.5); Arka plan rengi ve şeffaflık */
+    padding: 10px; /* Metin etrafındaki iç boşluk */
+    max-height: 70%;
+    /* overflow-y: scroll; */
+    overflow: hidden;
+    font-family:Papyrus,"Sagoe UI",monospace;
+  }
+  .avatar{
+    position:absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+    margin: 15px;
+    margin-top: 8%;
+    cursor: pointer;
+  }
+  .username{
+    position:absolute;
+    bottom: 0;
+    right: 5%;
+    /* transform: translate(-50%, -50%); burası overflow a neden oluyor */
+    color: rgb(107, 50, 50); /* İstediğiniz metin rengi */
+    font-size: 18px; /* İstediğiniz metin boyutu */
+    padding: 10px; /* Metin etrafındaki iç boşluk */
+    font-family:Papyrus,"Sagoe UI",monospace;
+    cursor: pointer;
+  }

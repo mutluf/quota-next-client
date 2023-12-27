@@ -14,9 +14,23 @@
     padding: 0 20px;
 }
 
+.img{
+    width: 100%;
+    height: 100vh;
+    object-fit:cover;
+    z-index: -1;
+}
 .logo{
     color: black;
     text-transform: uppercase;
     font-weight: bolder;
     padding: 0 20px;
 }
+.avatar{
+    
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+    cursor: pointer;
+    
+  }

@@ -16,12 +16,14 @@
   }
 } */
 .container{
-  background-color: burlywood;
+  background-color: white;
   margin: auto;
   min-height: 100vh;
+  width: 100%;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* .child{
@@ -30,14 +32,14 @@
  position: relative;
 } */
 .navbar, .footer {
-  position:absolute;
+  position:fixed;
   width: 100%;
   z-index: 2; /* Diğer öğelerden üstte olması için z-index kullanılır */
 }
 
 .navbar {
   top: 0;
-  background-color: rgba(255, 255, 255, 0.2); /* Navbar arka plan rengi ve saydamlık ayarı */
+  background-color: rgb(238, 228, 205); /* Navbar arka plan rengi ve saydamlık ayarı */
 }
 
 .footer {
@@ -46,16 +48,11 @@
   text-align: center;
 }
 
-.content {
-  z-index: 1; /* Navbar ve footer'dan arkada olması için z-index kullanılır */
-  position: relative;
-  width: 100%;
-  height: 100%;
-  /* Sayfa içeriği ile ilgili diğer stillendirmeler */
+.child{
 }
 
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -63,4 +60,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */

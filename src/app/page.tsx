@@ -1,12 +1,14 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Paper from '/public/paper.jpg'
+import CreateButton from "./components/createbutton/CreateButton";
+import Quote from "./components/quote/Quote";
+import styles from './page.module.css'
 export default function Home() {
   return (
-    <div>
-      <Image className={styles.img} src={Paper} alt="">
-
-      </Image>
+    <div className={styles.container} >
+        <Quote/>
+        <Quote/>
+        <Quote/>
+        <Quote/>  
+        <CreateButton/>
     </div>
   )
 }
