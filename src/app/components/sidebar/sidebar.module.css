@@ -1,0 +1,13 @@
+.container{
+    position: relative;
+    background-color: beige;
+    color: black;
+    width: 53%;
+    min-height: 80%;
+    left: 100%;
+    padding: 8px;
+   margin-right: 45%;
+   color: #6b3232;
+   font-family:Papyrus,"Sagoe UI",monospace;
+   font-size: medium;
+}
