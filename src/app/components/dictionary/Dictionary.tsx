@@ -14,6 +14,7 @@ import {DictionaryApiResponseType, DictionaryData,Meaning} from '../../../types/
 const Dictionary = () => {
   const [data, setData] = useState<DictionaryData | null>(null);
   const [word, setWord] = useState("");
+  const link ="https://sozluk.gov.tr";
 
   const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
@@ -83,32 +84,64 @@ const Dictionary = () => {
       
     </CardHeader>
     <Divider/>
+    <div className={styles.cardbody}>
+   
+  
+    <CardBody>
+  
+    <p className={styles.title}>Anlamlar</p>
     {data &&(
-      data.meanings.map((item)=>{
+      data.meanings.map((item,index)=>{
         
-        return(
-          
-          <CardBody>
-          <p>Anlamlar</p>
-          
-          {item.meaning}
-          
-          <Divider/>
-          <p>Atasözleri</p>
-          </CardBody>
+        return(  <div className={styles.content}>      
+          <p><span className={styles.index}>{index+1})</span> {item.meaning}</p>          
+          {
+            item.examples &&(
+              item.examples.map((example)=>{
+                return(
+                  <>
+                 
+                  <p>  <span className={styles.bold}>örn: </span> {example.ornek}</p>
+                  
+                  <br></br>
+                  </>
+                )               
+              })
+            )
+          }
+          </div>                  
         )
-      })
-    )    
+      })      
+    )       
     }
-    
     <Divider/>
+    <div className={styles.content}>
+    <p className={styles.title}>Atasözleri</p>
+          {data &&(
+      data.idioms?.map((item,index)=>{
+        
+        return(  <>      
+          <p><span className={styles.index}>{index+1})</span> {item.madde}</p>          
+          </>                  
+        )
+      })      
+    )       
+    }
+    </div>
+         
+          </CardBody>
+       
+    </div>
+    <Divider/>
+
     <CardFooter>
       <Link
         isExternal
+        
         showAnchorIcon
-        href="https://github.com/nextui-org/nextui"
+        href={link}
       >
-        Visit source code on GitHub.
+        Detay için ziyaret edin.
       </Link>
     </CardFooter>
   </Card>

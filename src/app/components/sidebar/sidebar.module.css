@@ -10,4 +10,8 @@
    color: #6b3232;
    font-family:Papyrus,"Sagoe UI",monospace;
    font-size: medium;
+   display: flex;
+}
+.dictionary{    
+    height: 4%;
 }

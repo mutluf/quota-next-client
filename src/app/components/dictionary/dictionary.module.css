@@ -3,3 +3,13 @@
     height: auto;
     margin-left: 2%;
 }
+.title, .index, .bold{
+    font-weight: bolder;
+}
+.cardbody{
+    max-height: 250px;
+    overflow-y: scroll;
+}
+.content{
+
+}

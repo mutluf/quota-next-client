@@ -4,7 +4,10 @@ import Dictionary from '../dictionary/Dictionary'
 const Sidebar = () => {
   return (
     <div className={styles.container}>
-        <Dictionary/>
+      <div className={styles.dictionary}>
+      <Dictionary/>
+      </div>
+        
     </div>
   )
 }
