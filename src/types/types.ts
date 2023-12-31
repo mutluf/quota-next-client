@@ -3,6 +3,12 @@ export type Example= {
     anlam_id: string;
     ornek_sira: string;
     ornek: string;
+    yazar?: Yazar[];
+  }
+  
+  export type Yazar= {
+    yazar_id: string;
+    tam_adi: string;
   }
   
   export type Meaning= {

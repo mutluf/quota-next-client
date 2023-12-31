@@ -9,8 +9,6 @@ import { Event } from "@material-ui/icons";
 import {DictionaryApiResponseType, DictionaryData,Meaning} from '../../../types/types'
 // https://sozluk.gov.tr/gts_id?id=alt%C4%B1n
 
-
-
 const Dictionary = () => {
   const [data, setData] = useState<DictionaryData | null>(null);
   const [word, setWord] = useState("");
@@ -29,10 +27,8 @@ const Dictionary = () => {
       if (response.ok) {
         const result: DictionaryApiResponseType[] = await response.json();
 
-        // Assuming the API returns an array, take the first item for simplicity
         const firstItem = result[0];
 
-        // Transform the API response into the structure you want to use
         const transformedData: DictionaryData = {
           word: firstItem.madde,
           meanings: firstItem.anlamlarListe.map((meaning) => ({
@@ -58,8 +54,6 @@ const Dictionary = () => {
     console.log(data);
   }, [data]); // Log data whenever it changes
 
-  
-
 
   return (
     <Card className="max-w-[400px]">
@@ -67,8 +61,6 @@ const Dictionary = () => {
      <Image className={styles.img} src={Dictionar} alt=""/>  
        <div className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-x-4">
        <div className="flex flex-col gap-x-4 ">
-        {/* <p className="text-md">NextUI</p> */}
-        {/* <p className="text-small text-default-500">nextui.org</p> */}
       </div>
       <div className={styles.input}>
       <Input type="text" label="Sözlük" placeholder="Kelime ara" 
@@ -78,17 +70,14 @@ const Dictionary = () => {
       onKeyDown={handleKeyPress}
       size="lg" 
       />
-      </div>
-        
+      </div>       
         </div>
       
     </CardHeader>
     <Divider/>
     <div className={styles.cardbody}>
    
-  
     <CardBody>
-  
     <p className={styles.title}>Anlamlar</p>
     {data &&(
       data.meanings.map((item,index)=>{
@@ -99,10 +88,18 @@ const Dictionary = () => {
             item.examples &&(
               item.examples.map((example)=>{
                 return(
-                  <>
-                 
-                  <p>  <span className={styles.bold}>örn: </span> {example.ornek}</p>
-                  
+                  <>                                 
+                  {
+                    example.yazar && (
+                      example.yazar.map((author)=>{
+                        return( 
+                          <p>
+                            <span className={styles.bold}>örn: </span> "{example.ornek}"<span className={styles.bold}> -{author.tam_adi}</span>                        
+                        </p> 
+                        )
+                      }) 
+                    )
+                  }           
                   <br></br>
                   </>
                 )               
@@ -127,17 +124,14 @@ const Dictionary = () => {
       })      
     )       
     }
-    </div>
-         
-          </CardBody>
-       
+    </div>        
+          </CardBody>      
     </div>
     <Divider/>
 
     <CardFooter>
       <Link
-        isExternal
-        
+        isExternal       
         showAnchorIcon
         href={link}
       >
