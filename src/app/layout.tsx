@@ -4,6 +4,7 @@ import './globals.css'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
+import Rigthbar from './components/rightbar/Rigthbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -26,6 +27,9 @@ export default function RootLayout({
           </div>
 
           <div className='wrapper'>
+            <div className='rightbar'>
+              <Rigthbar/>
+            </div>
           <div className='child'>
             {children}     
                  
