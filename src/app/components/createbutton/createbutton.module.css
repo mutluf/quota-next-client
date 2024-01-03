@@ -1,3 +1,17 @@
+
+.modal{
+    position:fixed;
+    width: 45%;
+    height: 86%;
+    left: 27%;
+   right: auto;
+   top: 14%;
+   padding: 10px;
+   bottom: 1%;
+    background-color: #faeace;
+    box-shadow: #bbbbbb;
+   
+}
 .button{
     border-radius: 50%;
     border:#eaca94;

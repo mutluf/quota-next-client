@@ -1,27 +1,16 @@
 "use client"
-import React from 'react'
-import styles from './createbutton.module.css'
-import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Divider} from "@nextui-org/react";
-import Image from 'next/image'
-import Pen from '../../../../public/pen.png'
+import React from "react";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
+import styles from './createquotemodal.module.css'
 
-const CreateButton = () => {
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+const CreateQuoteModal = () => {
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
   return (
-    <div>
-     
-      <Divider/>
-      <Button onPress={onOpen} className={styles.button}>
-        <Image className={styles.img} src={Pen} alt='' />
-        <Modal className={styles.modal} isOpen={isOpen} onOpenChange={onOpenChange}
-        placement='center'
-        shadow='lg'
-        radius='lg'
-        disableAnimation= {false}
-        backdrop='blur'
-        isKeyboardDismissDisabled= {true}
-        isDismissable= {false}
-        >
+    <div className={styles.container}>
+       <Button  onPress={onOpen}></Button>
+      <Modal  isOpen={isOpen} onOpenChange={onOpenChange}
+      placement="center"
+      >
         <ModalContent>
           {(onClose) => (
             <>
@@ -31,8 +20,6 @@ const CreateButton = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam pulvinar risus non risus hendrerit venenatis.
                   Pellentesque sit amet hendrerit risus, sed porttitor quam.
-
-                  sldkjf
                 </p>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -59,9 +46,8 @@ const CreateButton = () => {
           )}
         </ModalContent>
       </Modal>
-      </Button>
     </div>
   )
 }
 
-export default CreateButton
+export default CreateQuoteModal
