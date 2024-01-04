@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family:Papyrus,"Sagoe UI",monospace;
 }
 
 .wrapper{
@@ -64,7 +65,6 @@
   background-color: rgba(255, 255, 255, 0.2); /* Footer arka plan rengi ve saydamlık ayarı */
   text-align: center;
 }
-
 
 
 

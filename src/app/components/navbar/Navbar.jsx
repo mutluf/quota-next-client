@@ -1,12 +1,22 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './navbar.module.css'
 import Paper from '/public/paper.jpg'
 import Logo from '/public/logo.png'
 import Image from 'next/image'
-import { Avatar } from '@nextui-org/avatar'
 import Yasar from '../../../../public/yasar-kemal.jpg'
+import OpenedLetter from '../../../../public/openedletter.png'
+import ClosedLetter from '../../../../public/closedletter.png'
+import { Badge, Button } from '@nextui-org/react'
+import { useRouter } from 'next/navigation'
+
 const Navbar = () => {
+  const router = useRouter()
+
+  const [letter, setLetter] = useState(ClosedLetter);
+  const [content, setContent] = useState(9);
+
   return (
     <div className={styles.container}>
       <Image className={styles.img} src={Paper} alt="" fill></Image>
@@ -26,6 +36,54 @@ const Navbar = () => {
             links
         </div>
         {/* ICONS MAYBE */}
+        {/* MESSAGE */}
+        <div className={styles.message}>
+          {letter === ClosedLetter ? (
+            <Badge className={styles.badge} 
+            content={content}
+            color="danger" 
+            size='lg'
+            showOutline={true}
+            isInvisible={true}>
+            <Button className={styles.button}
+            onClick={()=>{setLetter(OpenedLetter)
+            router.push('/messages')
+            }}
+            disableAnimation={true}>
+              <Image className={styles.letter} src={letter} alt='' width={28} height={28}/>
+              <div className={styles.messageText}>Mesajlar</div>
+            </Button>
+            </Badge>
+          ):
+          (
+            <Button className={styles.button}
+            onClick={()=>{setLetter(ClosedLetter)
+            setContent(0);
+            }}
+            
+            disableAnimation={true}>
+              <Image className={styles.letter} src={letter} alt='' width={28} height={28}/>
+              <div className={styles.messageText}>Mesajlar</div>
+        </Button>
+          )}
+        
+
+        
+        </div>
+
+        {/* <div className={styles.notification}>
+        <Badge className={styles.badge} 
+        content="9+" 
+        color="danger" 
+        size='lg'
+        showOutline={true}>
+
+        <Button className={styles.button}>
+          <Image className={styles.letter} src={ClosedLetter} alt=''/>
+          <div className={styles.messageText}>Mesajlar</div>
+        </Button>
+        </Badge>
+        </div> */}
         <div>
            
             <div>
