@@ -2,7 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import Paper from '../../../../public/quote-paper.jpg'
 import styles from './quote.module.css'
-import { Avatar } from '@nextui-org/react'
+import { Avatar, Button } from '@nextui-org/react'
+import Link from 'next/link'
 // import UserAvatar from '../../../../public/yasar-kemal.jpg'
 
 const Quote = () => {
@@ -11,11 +12,14 @@ const Quote = () => {
       
       <div className={styles.wrapper}>
         <div class={styles.avatar}>
-          <Avatar 
-          radius='full'
-          size='md'
-          alt=''
-          src="https://i.pravatar.cc/150?u=a04258114e29026708c" />
+          <Link href='/users'>
+
+            <Avatar 
+            radius='full'
+            size='md'
+            alt=''
+            src="https://i.pravatar.cc/150?u=a04258114e29026708c" />
+            </Link>
         </div>
       
       <Image className={styles.img} src={Paper} alt='' />

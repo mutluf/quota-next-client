@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
 import Rigthbar from './components/rightbar/Rigthbar'
+import CreateButton from './components/createbutton/CreateButton'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export default function RootLayout({
           </div>         
           </div>
          
-          
+          <CreateButton/>
           <div className='footer'>
           <Footer/>
           </div>

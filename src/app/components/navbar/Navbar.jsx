@@ -5,7 +5,7 @@ import Paper from '/public/paper.jpg'
 import Logo from '/public/logo.png'
 import Image from 'next/image'
 import { Avatar } from '@nextui-org/avatar'
-
+import Yasar from '../../../../public/yasar-kemal.jpg'
 const Navbar = () => {
   return (
     <div className={styles.container}>
@@ -28,12 +28,14 @@ const Navbar = () => {
         {/* ICONS MAYBE */}
         <div>
            
-            <div className={styles.avatar}>
-            <Avatar
+            <div>
+              <Link href='/users'>
+            <Image  className={styles.avatar}
           radius='full'
           size='md'
           alt=''
-          src="https://i.pravatar.cc/150?u=a04258114e29026708c" />
+          src={Yasar} />
+          </Link>
             </div>
            
         </div>

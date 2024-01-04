@@ -1,0 +1,75 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 999;
+    font-family:Papyrus,"Sagoe UI",monospace;
+}
+
+.imgs{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.profileimg1{
+    border: 1px;
+    border-style: solid;
+    margin-top: 22px;
+    margin-left: 43%;
+    bottom: 3000px;
+    width: 150px;
+    min-height: 200px;
+    object-fit: cover;
+    transform: rotate(-15deg);
+}
+.profileimg2{
+    border: 1px;
+    border-style: solid;
+    top: 120px;
+    margin-left: 40%;
+    bottom: 3000px;
+    width: 150px;
+    min-height: 200px;
+    object-fit: cover;
+    
+}
+.profileimg3{
+    border: 1px;
+    border-style: solid;
+    margin-top: 30px;
+    margin-left: 35%;
+    bottom: 3000px;
+    width: 150px;
+    min-height: 200px;
+    object-fit: cover;
+    transform: rotate(20deg);
+}
+.content{
+    margin-top: 10%;
+    width: 100%;
+    min-height: 100px;
+}
+
+.quotes{
+    flex: 1;
+    
+    margin-top: 200px;
+}
+.wrapper{
+
+    flex: 1;
+    position: relative;
+    top: 120px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* position: fixed;
+    
+    z-index: 999;
+    background-color: white; */
+}
+.span{
+    font-weight: bolder;
+}
