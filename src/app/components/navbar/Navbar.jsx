@@ -11,7 +11,10 @@ const Navbar = () => {
     <div className={styles.container}>
       <Image className={styles.img} src={Paper} alt="" fill></Image>
       <div className={styles.logo}>
-      <Image className={styles.logoimg} src={Logo} alt=""></Image>
+        <Link href="/">
+        <Image className={styles.logoimg} src={Logo} alt=""></Image>
+        </Link>
+      
       <Link className={styles.logotext} href="/">
         Quotta
       </Link>

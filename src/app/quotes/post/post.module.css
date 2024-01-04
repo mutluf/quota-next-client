@@ -1,0 +1,49 @@
+.container{
+    width: 700px;
+    height: 500px;
+    margin-right: 25px;
+    margin-top: 10%;
+    border: 1px;
+    border-radius: 2%;
+    border-style: solid;
+    border-color: black;
+  
+}
+
+.content{
+    display: flex;
+    position: absolute;
+    margin: 10px;
+    color: rgb(45, 21, 21);
+    width: 650px;
+    font-family:Papyrus,"Sagoe UI",monospace;
+    padding: 10px;
+   
+}
+
+.text{
+    width: 650px;
+}
+
+.button{
+    
+    position: absolute;
+    top: 350px;
+    right: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(45, 37, 23);
+    border-radius: 6px;
+    padding: 4px 18px 4px 0px;
+    background-color:burlywood;
+    width: 100px;
+    text-align: center;
+    font-family:Papyrus,"Sagoe UI",monospace;
+}
+.img{
+    position: absolute;
+    top: 1px;
+    right: 4px;
+    width: 30px;
+    height: auto;
+}
