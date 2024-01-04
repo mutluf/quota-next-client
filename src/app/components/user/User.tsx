@@ -4,6 +4,7 @@ import Quote from '../quote/Quote'
 import Yasar from '../../../../public/yasar-kemal.jpg'
 import Yasar2 from '../../../../public/yasar-kemal-2.jpg'
 import Yasar3 from '../../../../public/yasar-kemal-3.jpg'
+
 import Image from 'next/image'
 const User = () => {
   return (
