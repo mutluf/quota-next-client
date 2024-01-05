@@ -6,7 +6,7 @@ import Bookmark from '../../../../public/bookmark.png'
 import Image from 'next/image'
 const list =[
     {id:1,name:"Ana sayfa",url:"/",icon:Home},
-    {id:2,name:"Kaydedilenler",url:"/bookmark",icon:Bookmark},
+    {id:2,name:"Kaydedilenler",url:"/bookmarks",icon:Bookmark},
     {id:3,name:"About Me",url:"/about",icon:Home},
     {id:4,name:"About Me",url:"/about",icon:Home},
     {id:5,name:"About Me",url:"/about",icon:Home},

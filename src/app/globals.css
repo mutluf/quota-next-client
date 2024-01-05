@@ -24,6 +24,7 @@
   align-items: center;
   justify-content: center;
   font-family:Papyrus,"Sagoe UI",monospace;
+  overflow-y: scroll;
 }
 
 .wrapper{
