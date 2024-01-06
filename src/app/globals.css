@@ -26,7 +26,13 @@
   font-family:Papyrus,"Sagoe UI",monospace;
   overflow-y: scroll;
 }
-
+.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
 .wrapper{
   flex-direction: row;
 }
