@@ -12,6 +12,9 @@
     box-shadow: #bbbbbb;
    
 }
+.container{
+    position: relative;
+}
 .button{
    
     border-radius: 50%;
@@ -34,4 +37,25 @@
 .but{
     display: flex;
     flex-direction: row;
+}
+
+@media screen and (max-width: 768px){
+    .button{   
+        border-radius: 50%;
+        border:#eaca94;
+        border-style: solid; 
+        position: fixed;
+        top: 85%;
+        left: 1%;
+        min-width: 60px;
+        min-height: 60px;
+        background-color: #eaca94;
+    }
+    .img{
+        /* background-color: #6b3232; */
+        
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
 }

@@ -106,7 +106,9 @@
   background-color: rgba(255, 255, 255, 0.2); /* Footer arka plan rengi ve saydamlık ayarı */
   text-align: center;
 }
+.child{
 
+}
 
 
 /* body {
@@ -118,3 +120,9 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
+@media screen and (max-width: 1024px){
+    .sidebar,.rightbar{
+      display: none;
+    }
+}

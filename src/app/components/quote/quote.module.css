@@ -1,34 +1,40 @@
+
 .container{
+  
     display: flex;
     width: 100%;
     max-height: 100%;
 }
 .wrapper {
     position: relative;
+    
     margin: 10px;
     flex-direction: row;
     justify-content: space-between;
+    
   }
 
 .img{
     width: 600px;
-    /* position: relative;
-   display: inline-block; */
+    height: auto;
+}
+.contentWrapper{
+  background-image: url("../../../../public/quote-paper.jpg");
+
+  flex-grow: 1;
 }
 .content {
     position:absolute;
     top: 10%;
     left: 12%;
     right: 5%;
+
     /* transform: translate(-50%, -50%); burası overflow a neden oluyor */
     color: #6b3232; /* İstediğiniz metin rengi */
     font-size: 18px; /* İstediğiniz metin boyutu */
-    /* text-align: center; */
-    /* background-color: rgba(0, 0, 0, 0.5); Arka plan rengi ve şeffaflık */
     padding: 10px; /* Metin etrafındaki iç boşluk */
-    max-height: 70%;
+
     /* overflow-y: scroll; */
-    overflow: hidden;
   }
   .avatar{
     position:absolute;
@@ -49,3 +55,16 @@
     padding: 10px; /* Metin etrafındaki iç boşluk */
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px){
+    .wrapper{
+      margin: 20px;
+    }
+    @media screen and (max-width: 640px){
+      .img{
+        width: 480px;
+        height: auto;
+      }
+      
+    }
+}

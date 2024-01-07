@@ -57,7 +57,7 @@
     align-self: center;
   }
   .message{
-
+    position: relative;
   }
   .button{
     display: flex;
@@ -78,10 +78,34 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 18%;
-    left: 91.5%;
-    z-index: 999;
+    top: -5px;
+    left: 34px;
     align-items: center;
     justify-content: center;
    
   }
+.fontToggle{
+
+}
+  @media screen and (max-width: 1280px){
+    .logotext{
+      font-size: 32px;
+    }
+
+    .features{
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 1024px){
+    .logo{
+      margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 640px){
+  .logotext,.message,.fontToggle{
+    display: none;
+  }
+  
+}

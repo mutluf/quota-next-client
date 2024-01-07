@@ -34,11 +34,11 @@ const Navbar = () => {
       
       <div className={styles.features}>
         {/* //LINKS */}
-        <div>
-            links
-        </div>
-        {/* ICONS MAYBE */}
+        
+        <div className={styles.fontToggle}>
+
         <FontToggle/>
+        </div>
         {/* MESSAGE */}
         <div className={styles.message}>
           {letter === ClosedLetter ? (
