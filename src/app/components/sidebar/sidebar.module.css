@@ -1,16 +1,18 @@
 .container{
-    background-color: beige;
-    color: black;
-    width: 53%;
-    min-height: 80%;
-    left: 100%;
-    padding: 8px;
-   margin-right: 45%;
-   color: #6b3232;
-   font-family:Papyrus,"Sagoe UI",monospace;
-   font-size: medium;
-   display: flex;
+    position: fixed;
+    height: 60%;
+    width: 20%;
+    /* background-color: rgba(240, 231, 166, 0.2); */
 }
-.dictionary{    
-    height: 4%;
+.listItem{
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 6px;
+    text-align:justify;
+    color: black;
+   font-family:Papyrus,"Sagoe UI",monospace;
+   font-weight: bold;
 }

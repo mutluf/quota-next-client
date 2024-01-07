@@ -29,7 +29,6 @@
     max-height: 70%;
     /* overflow-y: scroll; */
     overflow: hidden;
-    font-family:Papyrus,"Sagoe UI",monospace;
   }
   .avatar{
     position:absolute;
