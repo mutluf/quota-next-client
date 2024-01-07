@@ -10,6 +10,8 @@ import OpenedLetter from '../../../../public/openedletter.png'
 import ClosedLetter from '../../../../public/closedletter.png'
 import { Badge, Button } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
+import FontToggle from '../fontToggle/FontToggle'
+
 
 const Navbar = () => {
   const router = useRouter()
@@ -36,6 +38,7 @@ const Navbar = () => {
             links
         </div>
         {/* ICONS MAYBE */}
+        <FontToggle/>
         {/* MESSAGE */}
         <div className={styles.message}>
           {letter === ClosedLetter ? (

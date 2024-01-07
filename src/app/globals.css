@@ -14,14 +14,26 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: system-ui;
+} */
+/* 
+:root{
+  --font: system-ui;
 } */
 
 :root{
-  --font: Papyrus,"Sagoe UI",monospace;
+  --fontFamily: 'Arial';
+}
+.fontDefault{
+  --fontFamily: 'Arial';
 }
 
-body{
-  font-family: var(--font);
+.fontsegoe{
+  --fontFamily:'Papyrus';
+
 }
 
 .container{
@@ -32,8 +44,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family:Papyrus,"Sagoe UI",monospace;
+  font-family: var(--fontFamily);
   overflow-y: scroll;
+ 
 }
 .loading{
   display: flex;

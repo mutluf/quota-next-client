@@ -47,6 +47,5 @@
     color: rgb(107, 50, 50); /* İstediğiniz metin rengi */
     font-size: 18px; /* İstediğiniz metin boyutu */
     padding: 10px; /* Metin etrafındaki iç boşluk */
-    font-family:Papyrus,"Sagoe UI",monospace;
     cursor: pointer;
   }
