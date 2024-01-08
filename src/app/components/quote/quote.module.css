@@ -5,6 +5,7 @@
 }
 
 .container{
+  position: relative;
   display: grid;
   grid-template-areas: "overflow-content";
   gap: 8px;
@@ -66,26 +67,26 @@
     margin-top: 3%;
     cursor: pointer;
   }
-  .username{
-    position: relative;
+  .username{ 
     color: rgb(107, 50, 50); 
     cursor: pointer;
-    left: 70%;
-    bottom:0;
-    grid-area: overflow-content;
-    margin: 10% auto 10% auto;
     font-size: 18px;
+    grid-area: overflow-content;
+    color: #6b3232;
+    font-size: 18px;
+    left: 90%;
+    width: 95%;
+    text-align: right;
   }
-/* 
-  @media screen and (max-width: 768px){
-    .wrapper{
-      margin: 20px;
-    }
-    @media screen and (max-width: 640px){
-      .img{
-        width: 480px;
-        height: auto;
-      }
-      
-    }
-} */
+
+
+@media screen and (max-width: 640px){
+  .container{
+    margin: 40px;
+  }
+
+  .avatar{
+    width: 50px;
+    height: 50px;
+  } 
+}

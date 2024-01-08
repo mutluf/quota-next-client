@@ -1,35 +1,31 @@
 .container{
-    width: 700px;
+    width: inherit;
     height: 500px;
     margin-right: 25px;
     margin-top: 10%;
     border: 1px;
     border-radius: 2%;
     border-style: solid;
-    border-color: black;
-  
+    border-color: black; 
 }
 
 .content{
     display: flex;
-    position: absolute;
+    position: relative;
     margin: 10px;
     color: rgb(45, 21, 21);
-    width: 650px;
-    font-family:Papyrus,"Sagoe UI",monospace;
-    padding: 10px;
-   
+    width: 100%;
+    padding: 10px;   
 }
 
 .text{
-    width: 650px;
+    width: 540px;
 }
 
-.button{
-    
+.button{ 
     position: absolute;
     top: 350px;
-    right: 10px;
+    margin-left: 75%;
     border: 1px;
     border-style: solid;
     border-color: rgb(45, 37, 23);
@@ -38,7 +34,6 @@
     background-color:burlywood;
     width: 100px;
     text-align: center;
-    font-family:Papyrus,"Sagoe UI",monospace;
 }
 .img{
     position: absolute;

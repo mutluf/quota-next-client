@@ -2,7 +2,7 @@
     background-color: beige;
     color: black;
     width: 53%;
-    min-height: 80%;
+    max-height: 80%;
     left: 100%;
     padding: 8px;
    margin-right: 45%;
@@ -11,5 +11,7 @@
    display: flex;
 }
 .dictionary{    
-    height: 4%;
+    min-height: inherit;
+    max-height: inherit;
+    
 }

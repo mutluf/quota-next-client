@@ -8,4 +8,8 @@
     gap: 60px;
 }
 
-    
+@media screen and (max-width: 640px){
+    .container{
+        gap: 20px;
+    }
+}

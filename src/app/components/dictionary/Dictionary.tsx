@@ -1,12 +1,11 @@
 "use client"
-import React, { KeyboardEvent, ReactElement, ReactNode, useEffect } from "react";
+import React, { KeyboardEvent, useEffect } from "react";
 import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Input} from "@nextui-org/react";
 import styles from './dictionary.module.css'
 import Dictionar from '../../../../public/dictionary.png'
 import Image from "next/image";
 import { useState } from 'react';
-import { Event } from "@material-ui/icons";
-import {DictionaryApiResponseType, DictionaryData,Meaning} from '../../../types/types'
+import {DictionaryApiResponseType, DictionaryData} from '../../../types/types'
 // https://sozluk.gov.tr/gts_id?id=alt%C4%B1n
 
 const Dictionary = () => {
@@ -47,15 +46,16 @@ const Dictionary = () => {
     }
   };
   useEffect(() => {
-    fetchData(); // Fetch data when the component mounts
-  }, []); // Empty dependency array means it will run only once when the component mounts
+    fetchData();
+  }, []);
 
   useEffect(() => {
     console.log(data);
-  }, [data]); // Log data whenever it changes
+  }, [data]);
 
 
   return (
+    <div className={styles.container}>
     <Card className="max-w-[400px]">
     <CardHeader className="flex gap-3">
      <Image className={styles.img} src={Dictionar} alt=""/>  
@@ -78,10 +78,10 @@ const Dictionary = () => {
     <div className={styles.cardbody}>
    
     <CardBody>
-    <p className={styles.title}>Anlamlar</p>
-    {data &&(
+    
+    {data !== null ?(
       data.meanings.map((item,index)=>{
-        
+        <p className={styles.title}>Anlamlar</p>
         return(  <div className={styles.content}>      
           <p><span className={styles.index}>{index+1})</span> {item.meaning}</p>          
           {
@@ -109,27 +109,34 @@ const Dictionary = () => {
           </div>                  
         )
       })      
-    )       
+    )  :(
+      <>
+      
+      </>
+    )    
     }
     <Divider/>
-    <div className={styles.content}>
-    <p className={styles.title}>Atasözleri</p>
-          {data &&(
+    <div className={styles.content}>  
+          {data !== null ?(
       data.idioms?.map((item,index)=>{
-        
+        <p className={styles.title}>Atasözleri</p>
         return(  <>      
           <p><span className={styles.index}>{index+1})</span> {item.madde}</p>          
           </>                  
         )
       })      
-    )       
+    )  :(
+      <>
+      
+      </>
+    )          
     }
     </div>        
           </CardBody>      
     </div>
     <Divider/>
 
-    <CardFooter>
+    <CardFooter className={styles.footer}>
       <Link
         isExternal       
         showAnchorIcon
@@ -139,6 +146,7 @@ const Dictionary = () => {
       </Link>
     </CardFooter>
   </Card>
+  </div>
   )
 }
 

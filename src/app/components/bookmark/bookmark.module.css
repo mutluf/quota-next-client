@@ -23,11 +23,13 @@
     border-style: solid;
     border-color: gray;
     box-sizing: border-box;
-    min-width: 300px;
+    min-width: 310px;
     max-width: 300px;
     height: 215px;
     margin: 5px;
     cursor: pointer;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .title{

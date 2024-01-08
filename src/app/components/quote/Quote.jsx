@@ -26,9 +26,10 @@ const Quote = () => {
     <h2>Hero Text</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate vnt, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Add more content here and see the image height grows...</p>
-    <div class={styles.username}>
+    <br/>
+    <p class={styles.username}>
        Johan Narcissus
-       </div>
+       </p>
   </div>
   
 </div>
