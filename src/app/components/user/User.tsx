@@ -13,13 +13,13 @@ const User = () => {
         <div className={styles.imgs}>
 
         <div className={styles.img1}>
-            <Image className={styles.profileimg1} src={Yasar2} alt=''/>
+            <Image className={styles.profileimg1} src={Yasar2} alt=""/>
         </div>
         <div className={styles.img2}>
-            <Image className={styles.profileimg2} src={Yasar} alt=''/>
+            <Image className={styles.profileimg2} src={Yasar} alt=""/>
         </div>
         <div className={styles.img3}>
-            <Image className={styles.profileimg3} src={Yasar3} alt=''/>
+            <Image className={styles.profileimg3} src={Yasar3} alt=""/>
         </div>
         </div>
         <div className={styles.content}>

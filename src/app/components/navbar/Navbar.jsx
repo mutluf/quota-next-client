@@ -21,10 +21,10 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-      <Image className={styles.img} src={Paper} alt="" fill></Image>
+      <Image className={styles.img} src={Paper} alt="paper" priority={true}  fill></Image>
       <div className={styles.logo}>
         <Link href="/">
-        <Image className={styles.logoimg} src={Logo} alt=""></Image>
+        <Image className={styles.logoimg} src={Logo} alt="logo"></Image>
         </Link>
       
       <Link className={styles.logotext} href="/">
@@ -53,7 +53,7 @@ const Navbar = () => {
             router.push('/messages')
             }}
             disableAnimation={true}>
-              <Image className={styles.letter} src={letter} alt='' width={28} height={28}/>
+              <Image className={styles.letter} src={letter} alt="letter"width={28} height={28}/>
               <div className={styles.messageText}>Mesajlar</div>
             </Button>
             </Badge>
@@ -65,7 +65,7 @@ const Navbar = () => {
             }}
             
             disableAnimation={true}>
-              <Image className={styles.letter} src={letter} alt='' width={28} height={28}/>
+              <Image className={styles.letter} src={letter} alt="letter" width={28} height={28}/>
               <div className={styles.messageText}>Mesajlar</div>
         </Button>
           )}

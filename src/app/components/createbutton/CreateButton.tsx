@@ -12,7 +12,7 @@ const CreateButton = () => {
     <div className={styles.container}>
       
       <Button className={styles.button} onClick={() => router.push('/quotes/post')}>
-        <Image className={styles.img} src={Pen} alt='' />  
+        <Image className={styles.img} src={Pen} alt="pen"/>  
       </Button>
       
     </div>

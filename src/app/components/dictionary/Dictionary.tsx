@@ -49,16 +49,11 @@ const Dictionary = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
-
   return (
     <div className={styles.container}>
     <Card className="max-w-[400px]">
     <CardHeader className="flex gap-3">
-     <Image className={styles.img} src={Dictionar} alt=""/>  
+     <Image className={styles.img} src={Dictionar} alt="dictionary"/>  
        <div className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-x-4">
        <div className="flex flex-col gap-x-4 ">
       </div>
@@ -136,11 +131,12 @@ const Dictionary = () => {
     </div>
     <Divider/>
 
-    <CardFooter className={styles.footer}>
+    <CardFooter>
       <Link
         isExternal       
         showAnchorIcon
         href={link}
+        
       >
         Detay için ziyaret edin.
       </Link>

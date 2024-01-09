@@ -19,7 +19,7 @@ const Sidebar = () => {
             list.map((item)=>{
                 return(
                     <div className={styles.listItem}>
-                        <Image src={item.icon}  alt='' height={20} width={20}/>
+                        <Image className={styles.icon} src={item.icon}  alt='icons'/>
                         <Link href={item.url}>
                            
                         {item.name}

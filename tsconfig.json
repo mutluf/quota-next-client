@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/provider/FontProvider.jsx", "src/app/components/fontToggle/FontToggle.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/provider/FontProvider.jsx", "src/app/components/fontToggle/FontToggle.jsx", "src/app/layout.js", "src/app/loading.jsx", "src/app/page.jsx"],
   "exclude": ["node_modules"]
 }

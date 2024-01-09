@@ -7,8 +7,6 @@ import { FontContext } from '@/context/FontContext';
 const FontToggle = () => {
 
   const {toggle,font}= useContext(FontContext);
- 
-  console.log(font)
   return (
     <div className={styles.container} onClick={toggle}
     

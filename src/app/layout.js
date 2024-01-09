@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Footer from './components/footer/Footer'
@@ -10,17 +9,12 @@ import {FontContextProvider} from '../context/FontContext'
 import FontProvider from '@/provider/FontProvider'
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Quote',
   description: 'Life is quote',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-  
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       
