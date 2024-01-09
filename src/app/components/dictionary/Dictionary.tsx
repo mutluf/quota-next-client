@@ -6,11 +6,12 @@ import Dictionar from '../../../../public/dictionary.png'
 import Image from "next/image";
 import { useState } from 'react';
 import {DictionaryApiResponseType, DictionaryData} from '../../../types/types'
+import { stringify } from "querystring";
 // https://sozluk.gov.tr/gts_id?id=alt%C4%B1n
 
 const Dictionary = () => {
   const [data, setData] = useState<DictionaryData | null>(null);
-  const [word, setWord] = useState("");
+  const [word, setWord] = useState<string>("");
   const link ="https://sozluk.gov.tr";
 
   const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -19,7 +20,16 @@ const Dictionary = () => {
     }
   };
 
+
+    useEffect(() => {
+      fetchData();
+      console.log("trying")
+    }, []);
+  
+
   const fetchData = async () => {
+    //if koşulunu yazmayınca yukarıdaki useffect ile istek atıyor ve boş veri dönüyor.
+    if(word !== ""){
     try {
       const response  = await fetch(`https://sozluk.gov.tr/gts_id?id=${word}`);
 
@@ -29,7 +39,7 @@ const Dictionary = () => {
         const firstItem = result[0];
 
         const transformedData: DictionaryData = {
-          word: firstItem.madde,
+          word: word,
           meanings: firstItem.anlamlarListe.map((meaning) => ({
             meaning: meaning.anlam,
             examples: meaning.orneklerListe || [],
@@ -42,12 +52,11 @@ const Dictionary = () => {
         console.error('Error fetching data:', response.statusText);
       }
     } catch (error) {
+      
       console.error('Error fetching data:', error);
     }
+  }
   };
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <div className={styles.container}>
@@ -74,21 +83,21 @@ const Dictionary = () => {
    
     <CardBody>
     
-    {data !== null ?(
-      data.meanings.map((item,index)=>{
-        <p className={styles.title}>Anlamlar</p>
+    {word ?(
+      data?.meanings?.map((item,index)=>{
+        <p key={item.meaning} className={styles.title}>Anlamlar</p>
         return(  <div className={styles.content}>      
           <p><span className={styles.index}>{index+1})</span> {item.meaning}</p>          
           {
             item.examples &&(
-              item.examples.map((example)=>{
+              item.examples?.map((example)=>{
                 return(
-                  <>                                 
+                  <div key={example.ornek_sira}>                                 
                   {
                     example.yazar && (
                       example.yazar.map((author)=>{
                         return( 
-                          <p>
+                          <p key={author.yazar_id}>
                             <span className={styles.bold}>örn: </span> "{example.ornek}"<span className={styles.bold}> -{author.tam_adi}</span>                        
                         </p> 
                         )
@@ -96,7 +105,7 @@ const Dictionary = () => {
                     )
                   }           
                   <br></br>
-                  </>
+                  </div>
                 )               
               })
             )
@@ -116,7 +125,7 @@ const Dictionary = () => {
       data.idioms?.map((item,index)=>{
         <p className={styles.title}>Atasözleri</p>
         return(  <>      
-          <p><span className={styles.index}>{index+1})</span> {item.madde}</p>          
+          <p key={item.on_taki}><span className={styles.index}>{index+1})</span> {item.madde}</p>          
           </>                  
         )
       })      
