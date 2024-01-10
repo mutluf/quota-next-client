@@ -23,8 +23,9 @@ const Navbar = () => {
     <div className={styles.container}>
       <Image className={styles.img} src={Paper} 
       alt="paper" 
-      priority={true}
-      fill></Image>
+      fill
+      priority
+      ></Image>
       <div className={styles.logo}>
         <Link href="/">
         <Image className={styles.logoimg} src={Logo} alt="logo"></Image>

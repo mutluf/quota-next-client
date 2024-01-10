@@ -17,13 +17,13 @@ const Dictionary = () => {
   const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       fetchData();
+     
     }
   };
 
 
     useEffect(() => {
       fetchData();
-      console.log("trying")
     }, []);
   
 
@@ -37,18 +37,24 @@ const Dictionary = () => {
         const result: DictionaryApiResponseType[] = await response.json();
 
         const firstItem = result[0];
-
-        const transformedData: DictionaryData = {
-          word: word,
-          meanings: firstItem.anlamlarListe.map((meaning) => ({
-            meaning: meaning.anlam,
-            examples: meaning.orneklerListe || [],
-          })),
-          idioms: firstItem.atasozu,
-        };
-
-        setData(transformedData);
+        if(firstItem !== undefined){
+          const transformedData: DictionaryData = {
+            word: word,
+            meanings: firstItem.anlamlarListe?.map((meaning) => ({
+              meaning: meaning.anlam,
+              examples: meaning.orneklerListe || [],
+            })),
+            idioms: firstItem.atasozu,
+          };
+  
+          setData(transformedData);
+        }
+        else{
+          console.log("Kelime bulunamadı.")
+        }
+       
       } else {
+        
         console.error('Error fetching data:', response.statusText);
       }
     } catch (error) {
@@ -83,7 +89,7 @@ const Dictionary = () => {
    
     <CardBody>
     
-    {word ?(
+    {word && data ?(
       data?.meanings?.map((item,index)=>{
         <p key={item.meaning} className={styles.title}>Anlamlar</p>
         return(  <div className={styles.content}>      
@@ -95,7 +101,7 @@ const Dictionary = () => {
                   <div key={example.ornek_sira}>                                 
                   {
                     example.yazar && (
-                      example.yazar.map((author)=>{
+                      example?.yazar?.map((author)=>{
                         return( 
                           <p key={author.yazar_id}>
                             <span className={styles.bold}>örn: </span> "{example.ornek}"<span className={styles.bold}> -{author.tam_adi}</span>                        
@@ -114,18 +120,31 @@ const Dictionary = () => {
         )
       })      
     )  :(
+      <>{
+        word.length>0 && data ?(
+     
       <>
+       <br/>
+      Girilen kelime bulunamadı.
+      <br/>
+      </>
       
+        ):(
+          <></>
+        )
+      }
+      
+      <br/>
       </>
     )    
     }
     <Divider/>
     <div className={styles.content}>  
-          {data !== null ?(
+          {data ?(
       data.idioms?.map((item,index)=>{
-        <p className={styles.title}>Atasözleri</p>
+        <p key={item.madde_id} className={styles.title}>Atasözleri</p>
         return(  <>      
-          <p key={item.on_taki}><span className={styles.index}>{index+1})</span> {item.madde}</p>          
+          <p ><span className={styles.index}>{index+1})</span> {item.madde}</p>          
           </>                  
         )
       })      
@@ -133,7 +152,7 @@ const Dictionary = () => {
       <>
       
       </>
-    )          
+    )      
     }
     </div>        
           </CardBody>      
