@@ -2,28 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-
-   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   font-family: system-ui;
-} */
-/* 
-:root{
-  --font: system-ui;
-} */
-
 :root{
   --fontFamily: 'Arial';
 }
@@ -33,7 +11,6 @@
 
 .fontsegoe{
   --fontFamily:'Papyrus';
-
 }
 
 .container{
@@ -46,7 +23,6 @@
   justify-content: center;
   font-family: var(--fontFamily);
   overflow-y: scroll;
- 
 }
 .loading{
   display: flex;
@@ -68,9 +44,12 @@
   }
 }
 .wrapper{
+  position: relative;
+  display: flex;
   flex-direction: row;
   width: 600px;
   height: auto;
+  justify-content: space-evenly;
 }
 .sidebar{
   position: fixed;
@@ -78,8 +57,6 @@
   width: 42%;
   height: 55%;
   left: 75%;
-  z-index: 2;
- 
 }
 .rightbar{
   position: fixed;
@@ -87,44 +64,27 @@
   width: 42%;
   height: 55%;
   left: 1%;
- 
- 
 }
-
 
 .navbar, .footer {
   position:fixed;
   width: 100%;
-  z-index: 2; /* Diğer öğelerden üstte olması için z-index kullanılır */
+  z-index: 2;
 }
 
 .navbar {
   top: 0;
-  background-color: rgb(238, 228, 205); /* Navbar arka plan rengi ve saydamlık ayarı */
 }
 
 .footer {
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.2); /* Footer arka plan rengi ve saydamlık ayarı */
+  background-color: rgba(255, 255, 255, 0.2);
   text-align: center;
 }
-.child{
-
-}
-
-
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
 
 @media screen and (max-width: 1024px){
     .sidebar,.rightbar{
       display: none;
     }
 }
+

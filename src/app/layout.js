@@ -30,14 +30,14 @@ export default function RootLayout({ children }) {
                 <div className='rightbar'>
                   <Rigthbar/>
                 </div>
-              <div className='child'>
-                {children}     
-                    
-              </div> 
-              <div className='sidebar'>
-                <Sidebar/>
-                
-              </div>         
+
+                <div className='child'>
+                  {children}                           
+                </div> 
+
+                <div className='sidebar'>
+                  <Sidebar/>              
+                </div>         
               </div>
             
               <CreateButton/>
