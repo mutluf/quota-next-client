@@ -20,7 +20,7 @@ const Quote = () => {
          </div>
   <div className={styles.hero_image}>
     <Image className={styles.img} src={Paper} alt='paper' 
-    priority
+    
     />
   </div>
   <div className={styles.hero_text}> 

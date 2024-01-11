@@ -24,7 +24,6 @@ const Navbar = () => {
       <Image className={styles.img} src={Paper} 
       alt="paper" 
       fill
-      priority
       ></Image>
       <div className={styles.logo}>
         <Link href="/">
@@ -77,20 +76,6 @@ const Navbar = () => {
 
         
         </div>
-
-        {/* <div className={styles.notification}>
-        <Badge className={styles.badge} 
-        content="9+" 
-        color="danger" 
-        size='lg'
-        showOutline={true}>
-
-        <Button className={styles.button}>
-          <Image className={styles.letter} src={ClosedLetter} alt=''/>
-          <div className={styles.messageText}>Mesajlar</div>
-        </Button>
-        </Badge>
-        </div> */}
         <div>
            
             <div>
