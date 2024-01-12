@@ -86,9 +86,15 @@
     justify-content: center;
    
   }
-.fontToggle{
-
-}
+  .buttonLog{
+    border: 1px;
+    border-color: wheat;
+    border-radius: 8px;
+    color: black;
+    padding: 2px 8px;
+    background-color: wheat;
+    font-size: 14px;
+  }
   @media screen and (max-width: 1280px){
     .logotext{
       font-size: 32px;

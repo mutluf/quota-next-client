@@ -15,7 +15,6 @@ import FontToggle from '../fontToggle/FontToggle'
 
 const Navbar = () => {
   const router = useRouter()
-
   const [letter, setLetter] = useState(ClosedLetter);
   const [content, setContent] = useState(9);
 
@@ -36,11 +35,11 @@ const Navbar = () => {
       </div>
       
       <div className={styles.features}>
-        {/* //LINKS */}
-        
+        <button className={styles.buttonLog}>Çıkış Yap</button>
+        <button className={styles.buttonLog}>Giriş Yap</button>
+        {/* //LINKS */}       
         <div className={styles.fontToggle}>
-
-        <FontToggle/>
+          <FontToggle/>
         </div>
         {/* MESSAGE */}
         <div className={styles.message}>
@@ -65,29 +64,23 @@ const Navbar = () => {
             <Button className={styles.button}
             onClick={()=>{setLetter(ClosedLetter)
             setContent(0);
-            }}
-            
+            }}           
             disableAnimation={true}>
               <Image className={styles.letter} src={letter} alt="letter" width={28} height={28}/>
               <div className={styles.messageText}>Mesajlar</div>
-        </Button>
-          )}
-        
-
-        
+            </Button>
+          )}             
         </div>
-        <div>
-           
-            <div>
-              <Link href='/users'>
-            <Image  className={styles.avatar}
-          radius='full'
-          size='md'
-          alt=''
-          src={Yasar} />
-          </Link>
-            </div>
-           
+        <div>           
+          <div>
+            <Link href='/users'>
+              <Image  className={styles.avatar}
+              radius='full'
+              size='md'
+              alt=''
+              src={Yasar} />
+            </Link>
+          </div>          
         </div>
       </div>
     </div>
