@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Paper from '../../../../public/quote-paper.jpg'
+import Paper from '../../../public/quote-paper.jpg'
 import styles from './quote.module.css'
 import { Avatar } from '@nextui-org/react'
 import Link from 'next/link'

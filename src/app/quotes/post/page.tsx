@@ -7,6 +7,7 @@ import Bird from '../../../../public/logo.png'
 const page = () => {
 
   const [content, setContent]= useState("");
+  
   return (
     <div className={styles.container}>
         <br/>

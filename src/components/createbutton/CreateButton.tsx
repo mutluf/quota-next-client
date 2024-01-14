@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './createbutton.module.css'
 import {Button} from "@nextui-org/react";
 import Image from 'next/image'
-import Pen from '../../../../public/pen.png'
+import Pen from '../../../public/pen.png'
 import { useRouter } from 'next/navigation';
 
 const CreateButton = () => {

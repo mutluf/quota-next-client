@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './sidebar.module.css'
 import Link from 'next/link'
-import Home from '../../../../public/home.png'
-import Bookmark from '../../../../public/bookmark.png'
+import Home from '../../../public/home.png'
+import Bookmark from '../../../public/bookmark.png'
 import Image from 'next/image'
 const list =[
     {id:1,name:"Ana sayfa",url:"/",icon:Home},

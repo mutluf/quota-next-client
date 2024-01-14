@@ -3,6 +3,8 @@ import styles from './page.module.css'
 import { Input } from '@nextui-org/react'
 
 const LoginPage = () => {
+  const num = Math.random();
+  console.log(num);
   return (
     <div className={styles.container}>
       <div className={styles.form}>

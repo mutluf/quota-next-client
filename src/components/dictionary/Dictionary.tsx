@@ -2,10 +2,10 @@
 import React, { KeyboardEvent, useEffect } from "react";
 import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Input} from "@nextui-org/react";
 import styles from './dictionary.module.css'
-import Dictionar from '../../../../public/dictionary.png'
+import Dictionar from '../../../public/dictionary.png'
 import Image from "next/image";
 import { useState } from 'react';
-import {DictionaryApiResponseType, DictionaryData} from '../../../types/types'
+import {DictionaryApiResponseType, DictionaryData} from '../../types/types'
 import { stringify } from "querystring";
 // https://sozluk.gov.tr/gts_id?id=alt%C4%B1n
 
