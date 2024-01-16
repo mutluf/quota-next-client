@@ -7,16 +7,20 @@ const LoginPage = () => {
   console.log(num);
   return (
     <div className={styles.container}>
+      <div>      
+      Giriş
+      </div>
       <div className={styles.form}>
         <div className={styles.input}>
-            <Input placeholder='Kullanıcı adı'/>
+            <Input className={styles.inputt} placeholder='Kullanıcı adı'/>
         </div>
         <div className={styles.input}>
 
-        <Input placeholder='Şifre'
+        <Input className={styles.inputt} placeholder='Şifre'
         type='text'
         variant='flat'
-        radius='lg'/>
+        radius='lg'
+        size='lg'/>
         </div>
       </div>
     </div>

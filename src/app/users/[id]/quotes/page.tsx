@@ -1,6 +1,7 @@
 import React from 'react'
-import Quote from '../../../components/quote/Quote'
+
 import styles from './page.module.css'
+import Quote from '@/components/quote/Quote'
 
 const UserQuotesPage = () => {
   return (
