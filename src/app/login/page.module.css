@@ -1,27 +1,68 @@
 
 .container{
     width: 300px;
-    height:350px ;
-    background-color: rgb(224, 244, 237);
+    height:350px;
     border: 1px;
-    border-color: black;
+    border-color: #bbb;
     border-style: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10%;
+    gap: 10px;
 }
-
+.login{
+    flex: 1;
+    font-weight: bolder;
+}
 .form{
+    flex: 9;
+    width: 200px;
     display: flex;
-    gap: 20px;
+    gap: 1px;
     padding: 10px;
-
+    border: 1px;
+    border-style: solid;
+    border-color: #bbb;
     flex-direction: column;
     justify-content: space-around;
+    border-radius: 4px;
+    background-color: rgb(143, 120, 92);
 }
 
 .input{
-    border-radius: 10px;
+    border-radius: 2px;
     overflow: hidden;
+    background-color: pink;
+}
+.button{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border: 1px;
+    border-color: #bbb;
+    border-style: solid;
+    border-radius: 20px;
+    width: 90%;
+}
+
+.external{
+    flex: 2;
+    width: 100%;
+}
+
+.externalButton{
+    display:  flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: #bbb;
+    border-radius: 8px;
+    margin: 5px 0px;
+    width: 100%;
+    padding: 1px;
 }
