@@ -1,12 +1,12 @@
-import { GitHub } from "@material-ui/icons";
 import NextAuth from "next-auth";
+import github from "next-auth/providers/github";
 
 export const {handlers, auth, signIn, signOut} = NextAuth({
     //auth for user sessions
     providers:[
-        GitHub({
+        github({
             clientId: process.env.GITHUB_ID,
             clientSecret: process.env.GITHUB_SECRET
-        })
-    ]
+        }),
+    ],
 })
