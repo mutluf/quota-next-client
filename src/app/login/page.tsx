@@ -5,10 +5,11 @@ import { Input } from '@nextui-org/react'
 import Image from 'next/image'
 import Google from '../../../public/google.png'
 import Github from '../../../public/github.png'
+import {handleGithubLogin} from '@/lib/action'
 
 const LoginPage = () => {
 
-
+ 
   return (
     <div className={styles.container}>
       <div className={styles.login}>      
@@ -45,9 +46,11 @@ const LoginPage = () => {
           Google ile giriş yap</button>
         </div>
         <div >
-          <button className={styles.externalButton}>
+        <form action={handleGithubLogin}>
+          <button className={styles.externalButton} >
           <Image src={Github} alt='' width={20} height={20}/>
           Github ile giriş yap</button>
+        </form>
         </div>
       </div>
     </div>
