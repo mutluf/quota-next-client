@@ -1,5 +1,5 @@
 "use server"
-import {signIn} from '@/lib/auth'
+import {signIn, signOut} from '@/lib/auth'
 
 export const handleGithubLogin = async () =>{
     "use server"
@@ -8,5 +8,5 @@ export const handleGithubLogin = async () =>{
 
 export const handleLogout = async () =>{
   "use server"
-  await signIn();
+  await signOut();
 }

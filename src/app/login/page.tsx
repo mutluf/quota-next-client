@@ -7,8 +7,9 @@ import Google from '../../../public/google.png'
 import Github from '../../../public/github.png'
 import {handleGithubLogin} from '@/lib/action'
 
-const LoginPage = () => {
 
+const LoginPage = () => {
+  
  
   return (
     <div className={styles.container}>
