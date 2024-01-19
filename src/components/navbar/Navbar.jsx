@@ -11,7 +11,7 @@ import ClosedLetter from '../../../public/closedletter.png'
 import { Badge, Button } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
 import FontToggle from '../fontToggle/FontToggle'
-
+import {handleLogout} from '@/lib/action'
 
 const Navbar = () => {
   const router = useRouter()
@@ -35,7 +35,10 @@ const Navbar = () => {
       </div>
       
       <div className={styles.features}>
+        <form action={handleLogout}>
+
         <button className={styles.buttonLog}>Çıkış Yap</button>
+        </form>
         <button className={styles.buttonLog}>Giriş Yap</button>
         {/* //LINKS */}       
         <div className={styles.fontToggle}>
