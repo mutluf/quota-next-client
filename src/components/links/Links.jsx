@@ -11,10 +11,11 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Links = () => {
+const Links = ({session}) => {
     const router = useRouter()
     const [letter, setLetter] = useState(ClosedLetter);
     const [content, setContent] = useState(9);
+    console.log(session);
   return (
     <div>
       <div className={styles.features}>

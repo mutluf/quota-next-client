@@ -3,7 +3,9 @@ import {signIn, signOut} from '@/lib/auth'
 
 export const handleGithubLogin = async () =>{
     "use server"
-    await signIn("github");
+    await signIn("github", {
+      redirectTo:"http://localhost:3000"
+    });
 }
 
 export const handleLogout = async () =>{
