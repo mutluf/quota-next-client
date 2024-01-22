@@ -7,6 +7,7 @@ import Rigthbar from '../components/sidebar/Sidebar'
 import CreateButton from '../components/createbutton/CreateButton'
 import {FontContextProvider} from '../context/FontContext'
 import FontProvider from '@/provider/FontProvider'
+import { auth } from '@/lib/auth'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -14,7 +15,8 @@ export const metadata = {
   description: 'Life is quote',
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const session = await auth();
   return (
     <html lang="en">
       
@@ -36,7 +38,7 @@ export default function RootLayout({ children }) {
                 </div> 
 
                 <div className='sidebar'>
-                  <Sidebar/>              
+                  <Sidebar session ={session}/>              
                 </div>         
               </div>
             
