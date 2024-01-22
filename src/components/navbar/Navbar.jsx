@@ -9,7 +9,7 @@ import { auth } from '@/lib/auth'
 
 const Navbar = async () => {
   const session = await auth();
-  // console.log(session);
+
   return (
     <div className={styles.container}>
       <Image className={styles.img} src={Paper} 
@@ -24,7 +24,8 @@ const Navbar = async () => {
         <Link className={styles.logotext} href="/">
           Quotta
         </Link>
-      </div>     
+      </div>  
+       
       <Links session={session}/>
     </div>   
   )

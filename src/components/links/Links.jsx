@@ -12,64 +12,73 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const Links = ({session}) => {
-    const router = useRouter()
-    const [letter, setLetter] = useState(ClosedLetter);
-    const [content, setContent] = useState(9);
-    console.log(session);
+
+  const router = useRouter()
+  const [letter, setLetter] = useState(ClosedLetter);
+  const [content, setContent] = useState(9);
+  console.log(session);
+
   return (
     <div>
       <div className={styles.features}>
-       <form action={handleLogout}>
-
-        <button className={styles.buttonLog}>Çıkış Yap</button>
-        </form>
-        <button className={styles.buttonLog}>Giriş Yap</button>
-        {/* //LINKS */}       
+      {!session &&(
+      <button className={styles.buttonLog} onClick={()=>{router.push("login")}}>
+        Giriş Yap
+      </button>
+      )} 
         <div className={styles.fontToggle}>
         <FontToggle/>
         </div>
-        {/* MESSAGE */}
-        <div className={styles.message}>
-        {letter === ClosedLetter ? (
+        
+        {session &&(
+        <>
+          <form action={handleLogout}>
+            <button className={styles.buttonLog}>Çıkış Yap</button>
+          </form>
+
+          <div className={styles.message}>
+          {letter === ClosedLetter ? (
             <Badge className={styles.badge} 
             content={content}
             color="danger" 
             size='lg'
             showOutline={true}
             isInvisible={true}>
-            <Button className={styles.button}
-            onClick={()=>{setLetter(OpenedLetter)
-            router.push('/messages')
-            }}
-            disableAnimation={true}>
-            <Image className={styles.letter} src={letter} alt="letter"width={28} height={28}/>
-            <div className={styles.messageText}>Mesajlar</div>
-            </Button>
+              <Button className={styles.button}
+              onClick={()=>{setLetter(OpenedLetter)
+              router.push('/messages')
+              }}
+              disableAnimation={true}>
+                <Image className={styles.letter} src={letter} alt="letter"width={28} height={28}/>
+                <div className={styles.messageText}>Mesajlar</div>
+              </Button>
             </Badge>
-        ):
-        (
+          ):
+          (
             <Button className={styles.button}
             onClick={()=>{setLetter(ClosedLetter)
             setContent(0);
             }}           
             disableAnimation={true}>
-            <Image className={styles.letter} src={letter} alt="letter" width={28} height={28}/>
-            <div className={styles.messageText}>Mesajlar</div>
+              <Image className={styles.letter} src={letter} alt="letter" width={28} height={28}/>
+              <div className={styles.messageText}>Mesajlar</div>
             </Button>
-        )}             
-        </div>
-        <div>           
-        <div>
-            <Link href='/users'>
-            <Image  className={styles.avatar}
-            radius='full'
-            size='md'
-            alt=''
-            src={Yasar} />
-            </Link>
-        </div>          
-        </div>
-        </div>  
+          )}             
+          </div>
+          <div>           
+            <div>
+              <Link href='/users'>
+                <Image  className={styles.avatar}
+                radius='full'
+                size='md'
+                alt=''
+                src={Yasar} />
+              </Link>
+            </div>          
+          </div>
+        </>)
+        }    
+      </div>  
     </div>
   )
 }
