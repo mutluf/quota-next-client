@@ -1,6 +1,4 @@
-.container{
-    
-}
+
 
 .container th {
     background-color: red;
@@ -9,4 +7,8 @@
 .container tr {
     display: flex;
     justify-content: space-around;
+}
+
+.container tr {
+    color: var(--text);
 }
