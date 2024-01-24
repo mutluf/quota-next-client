@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Posts from '@/components/(admin)/posts/Posts';
 
+
 const PostPage = () => {
   const [datas, setDatas] = useState([]);
 
@@ -26,9 +27,11 @@ const PostPage = () => {
   }, []); // Empty dependency array ensures the effect runs only once, similar to componentDidMount
 
   return (
+
     <div>
       <Posts datas={datas} />
     </div>
+
   );
 };
 

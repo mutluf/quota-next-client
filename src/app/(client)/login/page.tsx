@@ -3,8 +3,8 @@ import React from 'react'
 import styles from './page.module.css'
 import { Input } from '@nextui-org/react'
 import Image from 'next/image'
-import Google from '../../../public/google.png'
-import Github from '../../../public/github.png'
+import Google from '../../../../public/google.png'
+import Github from '../../../../public/github.png'
 import {handleGithubLogin} from '@/lib/action'
 
 

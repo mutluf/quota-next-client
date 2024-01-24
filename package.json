@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/x-data-grid": "^6.19.1",
     "@nextui-org/avatar": "^2.0.24",
     "@nextui-org/react": "^2.2.9",
     "framer-motion": "^10.16.16",

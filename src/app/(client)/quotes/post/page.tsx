@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styles from './post.module.css'
 import { Button, Divider, Textarea } from '@nextui-org/react'
 import Image from 'next/image'
-import Bird from '../../../../public/logo.png'
+import Bird from '../../../../../public/logo.png'
 const page = () => {
 
   const [content, setContent]= useState("");

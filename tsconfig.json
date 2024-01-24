@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/provider/FontProvider.jsx", "src/app/components/fontToggle/FontToggle.jsx", "src/app/layout.js", "src/app/loading.jsx", "src/app/page.jsx", "src/components/sidebar/Sidebar.jsx", "src/app/admin/posts/page.tsx", "src/components/(admin)/posts/Posts.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/provider/FontProvider.jsx", "src/app/components/fontToggle/FontToggle.jsx", "src/app/(client)/layout.js", "src/app/(client)/loading.jsx", "src/app/(client)/page.jsx", "src/components/sidebar/Sidebar.jsx", "src/app/admin/posts/page.tsx", "src/components/(admin)/posts/Posts.jsx"],
   "exclude": ["node_modules"]
 }
