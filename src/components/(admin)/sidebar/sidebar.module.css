@@ -1,16 +1,21 @@
 .container{
-    position: sticky;
+    position: static;
     top: 40px;
 }
 
 .user{
+    position: relative;
     display: flex;
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+   margin-top: 20px;
 }
 
 .userImage{
+    position: relative;
+    top: 10px;
+    left: 15px;
     border-radius: 50%;
     object-fit: cover;
 }

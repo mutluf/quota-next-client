@@ -6,8 +6,8 @@ import Bookmark from '../../../public/bookmark.png'
 import Image from 'next/image'
 const list =[
     {id:1,name:"Ana sayfa", isVisible: true, url:"/",icon:Home},
-    {id:2,name:"Kaydedilenler", isVisible: false, url:"/bookmarks",icon:Bookmark},
-    {id:3,name:"Dergiler", isVisible: false, url:"/journals",icon:Home},
+    {id:2,name:"Kaydedilenler", isVisible: true, url:"/bookmarks",icon:Bookmark},
+    {id:3,name:"Dergiler", isVisible: true, url:"/journals",icon:Home},
     {id:4,name:"About Me", isVisible: true, url:"/about",icon:Home},
     {id:5,name:"About Me", isVisible: true, url:"/about",icon:Home},
     {id:6,name:"About Me", isVisible: true, url:"/about",icon:Home},
