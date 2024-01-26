@@ -19,6 +19,7 @@ const page = () => {
         <div className={styles.wrapper}>           
           <div className={styles.text}>
             <Textarea  
+            style={{outline:"none"}}
             type="text" 
             fullWidth= {true}
             value={content}
