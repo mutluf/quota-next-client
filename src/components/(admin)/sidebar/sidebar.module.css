@@ -1,6 +1,7 @@
 .container{
     position: static;
     top: 40px;
+    min-height: 100vh;
 }
 
 .user{

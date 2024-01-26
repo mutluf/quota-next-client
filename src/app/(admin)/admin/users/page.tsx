@@ -5,12 +5,13 @@ import Image from 'next/image'
 import Yasar1 from '../../../../../public/yasar-kemal.jpg'
 import Yasar2 from '../../../../../public/yasar-kemal-2.jpg'
 import Link from 'next/link'
+import Pagination from '@/components/(admin)/pagination/Pagination'
 
 const UserPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder={"user"} />
+        <Search placeholder={"Search for a user..."} />
         <button className={styles.addButton}>Add New</button>
       </div>
       <div className={styles.table}>
@@ -81,6 +82,7 @@ const UserPage = () => {
 
           </tbody>
         </table>
+        <Pagination/>
       </div>
     </div>
   )

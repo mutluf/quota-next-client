@@ -39,6 +39,11 @@
     object-fit: cover;
 }
 
+.buttons{
+   display: flex;
+   align-items: center;
+   gap:10px
+}
 .button{
     padding: 5px 10px;
     border-radius: 5px;
