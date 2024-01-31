@@ -36,7 +36,7 @@ const Links = ({session}) => {
             <button className={styles.buttonLog}>Çıkış Yap</button>
           </form>
 
-          <div className={styles.message}>
+          {/* <div className={styles.message}>
           {letter === ClosedLetter ? (
             <Badge className={styles.badge} 
             content={content}
@@ -64,7 +64,7 @@ const Links = ({session}) => {
               <div className={styles.messageText}>Mesajlar</div>
             </Button>
           )}             
-          </div>
+          </div> */}
           <div>           
             <div>
               <Link href='/users'>

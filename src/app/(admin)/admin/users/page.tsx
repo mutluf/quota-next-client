@@ -82,7 +82,7 @@ const UserPage = () => {
 
           </tbody>
         </table>
-        <Pagination/>
+        <Pagination />
       </div>
     </div>
   )
