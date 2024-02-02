@@ -25,3 +25,16 @@ export type BookmarkCreateRequestType={
     description:string;
     userProfileId:string;
 }
+
+export type UserCreateRequestType={
+    username:string;
+    email:string;
+    password:string;
+}
+
+export type UserUpdateRequestType={
+    id:string;
+    username:string;
+    email:string;
+    password:string;
+}
