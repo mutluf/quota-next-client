@@ -1,16 +1,21 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from './posts.module.css'
 import Pagination from '@/components/(admin)/pagination/Pagination';
-import Yasar1 from '../../../../../public/yasar-kemal.jpg'
-import Yasar2 from '../../../../../public/yasar-kemal-2.jpg'
+
 import Search from '@/components/(admin)/search/Search';
 
-const PostPage = () => {
+// interface SearchParamsProps{
+//   searchParamsProps:string;
+// }
+
+const PostPage = ({searchParamsProps}:any ) => {
+
+  const username = searchParamsProps?.query || "";
   const [datas, setDatas] = useState([]);
 
+  const placeholder:string ="Search for a user...";
   useEffect(() => {
     const getData = async () => {
       try {
@@ -36,7 +41,7 @@ const PostPage = () => {
     return (
       <div className={styles.container}>
         <div className={styles.top}>
-          <Search placeholder={"Search for a user..."} />
+          <Search placeholder={placeholder} />
           <button className={styles.addButton}>Add New</button>
         </div>
         <div className={styles.table}>
@@ -52,31 +57,7 @@ const PostPage = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>
-                  id ds8s4ad4a1d8
-                </td>
-                <td>
-                  <span className={`${styles.role} ${styles.admin}`}>
-                    Ustadır Arı
-                  </span>
-                </td>
-                <td>
-                lorem ipsum things
-                </td>
-                <td>
-                  <div className={styles.buttons}>
-  
-                    <Link href="/">
-                      <button className={`${styles.button} ${styles.view}`}>View</button>
-                    </Link>
-                    <Link href="/">
-                      <button className={`${styles.button} ${styles.delete}`}>Delete</button>
-                    </Link>
-                  </div>
-                </td>
-  
-              </tr>
+             
               <tr>
                 <td>
                   id 5s8dv4s8adfV
