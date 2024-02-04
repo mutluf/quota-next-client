@@ -49,3 +49,8 @@ export type RoleUpdateRequestType={
     id:string;
     role:string;
 }
+
+export type AuthLoginRequestType={
+    username:string;
+    password:string;
+}
