@@ -1,7 +1,15 @@
 import React from 'react';
 import styles from './posts.module.css'
 import { DataGrid } from '@mui/x-data-grid';
+import { makeStyles } from '@mui/styles';
 
+const useStyles = makeStyles({
+  root: {
+    '& .MuiDataGrid-cell': {
+      color: "white", // veya başka bir renk seçimi
+    },
+  },
+});
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'title', headerName: 'Title', width: 130 },
@@ -26,7 +34,8 @@ const columns = [
 
 
 const Posts = ({ datas }) => {
-  console.log(datas);
+
+  const classes = useStyles();
 
   const rows =datas.map((item) => ({
     id: item.id,
@@ -41,7 +50,10 @@ const Posts = ({ datas }) => {
 
        {datas &&
        <DataGrid
+       className={classes.root}
+      
        rows={rows}
+       
        columns={columns}
        initialState={{
          pagination: {

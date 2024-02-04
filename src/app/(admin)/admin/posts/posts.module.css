@@ -1,0 +1,71 @@
+.container{
+    background-color: var(--bgSoft);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addButton{
+    padding: 10px;
+    background-color: slateblue;
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.table td{
+    padding: 20px;
+    max-height: 10px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.userImage{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.buttons{
+   display: flex;
+   align-items: center;
+   gap:10px
+}
+.button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+}
+.view{
+    background-color: darksalmon;
+}
+.delete{
+    background-color:darkred;
+}
+
+.content{
+
+display: block;
+white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 30ch;
+   color: white;
+   overflow: hidden;
+}
