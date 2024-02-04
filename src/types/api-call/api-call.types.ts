@@ -40,7 +40,12 @@ export type UserUpdateRequestType = {
 }
 
 export type UserProfileUpdateRequestType = {
-    userId: string
-    description?: string,
-    imageUrl?: string,
+    userId: string;
+    description?: string;
+    imageUrl?: string;
+}
+
+export type RoleUpdateRequestType={
+    id:string;
+    role:string;
 }
