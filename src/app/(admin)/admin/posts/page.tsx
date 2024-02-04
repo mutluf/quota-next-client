@@ -6,16 +6,16 @@ import Pagination from '@/components/(admin)/pagination/Pagination';
 
 import Search from '@/components/(admin)/search/Search';
 
-// interface SearchParamsProps{
-//   searchParamsProps:string;
-// }
+interface SearchProps{
+  paramKey:string
+}
 
-const PostPage = ({searchParamsProps}:any ) => {
+const PostPage = ({searchParamsProps}:any, {paramKey}:SearchProps ) => {
 
   const username = searchParamsProps?.query || "";
   const [datas, setDatas] = useState([]);
 
-  const placeholder:string ="Search for a user...";
+  const placeholder:string ="Search for a word...";
   useEffect(() => {
     const getData = async () => {
       try {
@@ -41,7 +41,7 @@ const PostPage = ({searchParamsProps}:any ) => {
     return (
       <div className={styles.container}>
         <div className={styles.top}>
-          <Search placeholder={placeholder} />
+          <Search placeholder={placeholder} paramKey="word" />
           <button className={styles.addButton}>Add New</button>
         </div>
         <div className={styles.table}>

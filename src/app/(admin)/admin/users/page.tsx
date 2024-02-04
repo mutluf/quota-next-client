@@ -11,7 +11,7 @@ const UserPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder={"Search for a user..."} />
+        <Search placeholder={"Search for a user..."} paramKey='username' />
         <button className={styles.addButton}>Add New</button>
       </div>
       <div className={styles.table}>

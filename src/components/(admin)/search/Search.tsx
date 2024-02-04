@@ -5,14 +5,16 @@ import { MdSearch } from 'react-icons/md'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 
-interface PlaceholderProps{
-    placeholder:string
+interface SearchProps{
+    placeholder:string;
+    paramKey:string;
   }
 
-const Search = ( {placeholder}:PlaceholderProps) => {
+const Search = ( {placeholder,paramKey}:SearchProps) => {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
+     
     const {replace} =useRouter();
 
     const handleSearch=(e: ChangeEvent<HTMLInputElement>)=>{
@@ -20,9 +22,9 @@ const Search = ( {placeholder}:PlaceholderProps) => {
 
         if(e.target.value){
 
-            params.set("username", e.target.value);
+            params.set(paramKey, e.target.value);
         }else{
-            params.delete("username");
+            params.delete(paramKey);
         }
     
         replace(`${pathname}?${params}`);
