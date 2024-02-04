@@ -4,7 +4,7 @@ import http from "./http-common";
 class UserService{
 
 
-    getAllUsers(index: number, count:number){
+    getAllUsers(index: string, count:number){
         return http.get("/users",{
             params:{
                 index :index,
@@ -13,11 +13,11 @@ class UserService{
         })
     }
 
-    getUserById(id:number){
+    getUserById(id:string){
         http.get(`/users/${id}`,{})
     }
 
-    getUserRoles(id:number, index:number, count:number){
+    getUserRoles(id:string, index:number, count:number){
         return http.get(`/users/${id}/roles`,{
             params:{
                 index :index,
@@ -34,19 +34,19 @@ class UserService{
         })
     }
 
-    updateUsers(id:number, data:UserUpdateRequestType[]){
+    updateUsers(id:string, data:UserUpdateRequestType[]){
         return http.put(`/users/${id}/roles`,data,{
             headers:{"Content-type":"Application/json"}
         })
     }
 
-    updateUser(id:number, data:UserUpdateRequestType){
+    updateUser(id:string, data:UserUpdateRequestType){
         return http.put(`/users/${id}/roles`,data,{
             headers:{"Content-type":"Application/json"}
         })
     }
 
-    deleteUser(id:number){
+    deleteUser(id:string){
         return http.delete(`/users/${id}`);
     }
 }
