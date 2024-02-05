@@ -1,7 +1,9 @@
 .container{
+    position: relative;
     background-color: beige;
+
     color: black;
-    width: 53%;
+    width: 23%;
     max-height: 80%;
     left: 100%;
     padding: 8px;
@@ -11,7 +13,10 @@
    display: flex;
 }
 .dictionary{    
-    min-height: inherit;
-    max-height: inherit;
-    
+    position: fixed;
+    top: 20%;
+    right: 1%;
+    background-color: beige;
+    width: inherit;
+    padding: 8px;
 }

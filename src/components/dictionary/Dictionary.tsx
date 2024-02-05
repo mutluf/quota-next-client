@@ -11,17 +11,20 @@ import { DictionaryApiResponseType, DictionaryData } from '../../types/types'
 const Dictionary = () => {
   const [data, setData] = useState<DictionaryData | null>(null);
   const [word, setWord] = useState<string>("");
+
+  const [isEntered, setEntered] = useState(false);
   const link = "https://sozluk.gov.tr";
 
   const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       fetchData();
-
+      setEntered(true);
     }
   };
 
   useEffect(() => {
     fetchData();
+
   }, []);
 
   const fetchData = async () => {
@@ -85,8 +88,8 @@ const Dictionary = () => {
 
             {word && data ? (
               data?.meanings?.map((item, index) => {
-                <p key={item.meaning} className={styles.title}>Anlamlar</p>
-                return (<div className={styles.content}>
+                <p className={styles.title}>Anlamlar</p>
+                return (<div  key={item.meaning} className={styles.content}>
                   <p><span className={styles.index}>{index + 1})</span> {item.meaning}</p>
                   {
                     item.examples && (
@@ -116,7 +119,7 @@ const Dictionary = () => {
               })
             ) : (
               <>{
-                word.length > 0 && data === null ? (
+                isEntered ? (
 
                   <>
                     <br />
@@ -138,8 +141,12 @@ const Dictionary = () => {
               {data ? (
                 data.idioms?.map((item, index) => {
                   <p key={item.madde_id} className={styles.title}>Atasözleri</p>
-                  return (<>
-                    <p ><span className={styles.index}>{index + 1})</span> {item.madde}</p>
+                  return (
+                  <>
+                    <p >
+                      <span className={styles.index}>{index + 1})  </span> 
+                      {item.madde}
+                      </p>
                   </>
                   )
                 })
